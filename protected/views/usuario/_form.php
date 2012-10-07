@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><?php echo Yii::t('sistema','Campos com');?> <span class="required">*</span> <?php echo Yii::t('sistema','são requeridos');?>.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -35,7 +35,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_tipo_usuario'); ?>
-		<?php echo $form->textField($model,'id_tipo_usuario'); ?>
+		<?php echo $form->dropDownList($model, 'id_tipo_usuario', $tiposUsuarios); ?>
 		<?php echo $form->error($model,'id_tipo_usuario'); ?>
 	</div>
 

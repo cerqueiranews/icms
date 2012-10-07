@@ -67,9 +67,9 @@ class Categoria extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'nome' => 'Nome',
-			'descricao' => 'Descricao',
+			'id' => Yii::t('sistema', 'Id'),
+			'nome' => Yii::t('sistema', 'Nome'),
+			'descricao' => Yii::t('sistema', 'Descrição'),
 		);
 	}
 

@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Categorias'=>array('index'),
-	'Create',
+	Yii::t('Categorias')=>array('index'),
+	Yii::t('Nova'),
 );
 
 $this->menu=array(
-	array('label'=>'List Categoria', 'url'=>array('index')),
-	array('label'=>'Manage Categoria', 'url'=>array('admin')),
+	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Categoria</h1>
+<h1><?php echo Yii::t('Nova Categoria'); ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

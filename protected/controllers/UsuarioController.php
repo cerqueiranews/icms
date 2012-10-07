@@ -71,7 +71,11 @@ class UsuarioController extends Controller
 	public function actionCreate()
 	{
 		$model=new Usuario;
-
+		$oTiposUsuarios = TipoUsuario::model()->findAll();
+		$aTiposUsuarios = array();
+		foreach ($oTiposUsuarios as $oTipoUsuarios) {
+			$aTiposUsuarios[$oTipoUsuarios->id] = $oTipoUsuarios->nome;
+		}
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -86,6 +90,7 @@ class UsuarioController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+			'tiposUsuarios'=>$aTiposUsuarios,
 		));
 	}
 
@@ -97,7 +102,11 @@ class UsuarioController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$oTiposUsuarios = TipoUsuario::model()->findAll();
+		$aTiposUsuarios = array();
+		foreach ($oTiposUsuarios as $oTipoUsuarios) {
+			$aTiposUsuarios[$oTipoUsuarios->id] = $oTipoUsuarios->nome;
+		}
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -110,6 +119,7 @@ class UsuarioController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'tiposUsuarios'=>$aTiposUsuarios,
 		));
 	}
 

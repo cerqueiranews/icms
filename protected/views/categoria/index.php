@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Categorias',
+	Yii::t('Categorias'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Categoria', 'url'=>array('create')),
-	array('label'=>'Manage Categoria', 'url'=>array('admin')),
+	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Categorias</h1>
+<h1><?php echo Yii::t('Lista de Categorias'); ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
