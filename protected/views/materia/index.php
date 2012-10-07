@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Materias',
+	Yii::t('Matérias'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Materia', 'url'=>array('create')),
-	array('label'=>'Manage Materia', 'url'=>array('admin')),
+	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Materias</h1>
+<h1><?php echo Yii::t('Lista de Matérias'); ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

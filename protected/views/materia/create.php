@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Materias'=>array('index'),
-	'Create',
+	Yii::t('Matérias')=>array('index'),
+	Yii::t('Nova'),
 );
 
 $this->menu=array(
-	array('label'=>'List Materia', 'url'=>array('index')),
-	array('label'=>'Manage Materia', 'url'=>array('admin')),
+	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Materia</h1>
+<h1><?php echo Yii::t('Nova Matéria'); ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model, 'categorias'=>$categorias)); ?>

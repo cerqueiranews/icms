@@ -104,14 +104,14 @@ class Materia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'titulo' => 'Titulo',
-			'subtitulo' => 'Subtitulo',
-			'data' => 'Data',
-			'link' => 'Link',
-			'texto' => 'Texto',
-			'id_usuario' => 'Autor',
-			'id_categoria' => 'Categoria',
+			'id' => Yii::t('sistema', 'Id'),
+			'titulo' => Yii::t('sistema', 'Título'),
+			'subtitulo' => Yii::t('sistema', 'Subtítulo'),
+			'data' => Yii::t('sistema', 'Data'),
+			'link' => Yii::t('sistema', 'Link'),
+			'texto' => Yii::t('sistema', 'Texto'),
+			'id_usuario' => Yii::t('sistema', 'Autor'),
+			'id_categoria' => Yii::t('sistema', 'Categoria'),
 		);
 	}
 

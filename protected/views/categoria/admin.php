@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Categorias'=>array('index'),
-	'Manage',
+	Yii::t('Categorias')=>array('index'),
+	Yii::t('Gerenciamento'),
 );
 
 $this->menu=array(
-	array('label'=>'List Categoria', 'url'=>array('index')),
-	array('label'=>'Create Categoria', 'url'=>array('create')),
+	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,11 +23,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Categorias</h1>
+<h1><?php echo Yii::t('Gerenciamento de Categorias'); ?></h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+<?php echo Yii::t('Você pode utilizar os seguintes operadores'); ?> (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) <?php echo Yii::t('no início de cada valor a ser procurado para especificar o tipo de comparação a ser feita'); ?>.
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>

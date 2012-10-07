@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Materias'=>array('index'),
-	$model->id,
+	Yii::t('Matérias')=>array('index'),
+	$model->titulo,
 );
 
 $this->menu=array(
-	array('label'=>'List Materia', 'url'=>array('index')),
-	array('label'=>'Create Materia', 'url'=>array('create')),
-	array('label'=>'Update Materia', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Materia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Materia', 'url'=>array('admin')),
+	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
+	array('label'=>Yii::t('Atualização'), 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>Yii::t('Apagar'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Materia #<?php echo $model->id; ?></h1>
+<h1><?php echo Yii::t('Matéria'); ?> #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

@@ -25,7 +25,7 @@
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		<?php
 		echo CHtml::form('','POST',array('style'=>'padding:5px;float:right;'));
-		echo CHtml::dropDownList('_lang', Yii::app()->request->cookies['linguagem']->value, array('en_us' => 'English', 'pt_br' => 'Português'), array('submit' => ''));
+		echo CHtml::dropDownList('_lang', Yii::app()->request->cookies['linguagem']->value, array('pt_br' => 'Português', 'en_us' => 'English'), array('submit' => ''));
 		echo CHtml::endForm();
 		?>
 	</div><!-- header -->

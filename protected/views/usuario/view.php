@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	$model->id,
+	Yii::t('Usuários')=>array('index'),
+	$model->nome,
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Create Usuario', 'url'=>array('create')),
-	array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
+	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
+	array('label'=>Yii::t('Atualização'), 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>Yii::t('Apagar'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Usuario #<?php echo $model->id; ?></h1>
+<h1><?php echo Yii::t('Usuário');?> #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

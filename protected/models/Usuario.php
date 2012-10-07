@@ -73,12 +73,12 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'nome' => 'Nome',
-			'email' => 'Email',
-			'login' => 'Login',
-			'senha' => 'Senha',
-			'id_tipo_usuario' => 'Tipo',
+			'id' => Yii::t('sistema', 'Id'),
+			'nome' => Yii::t('sistema', 'Nome'),
+			'email' => Yii::t('sistema', 'Email'),
+			'login' => Yii::t('sistema', 'Login'),
+			'senha' => Yii::t('sistema', 'Senha'),
+			'id_tipo_usuario' => Yii::t('sistema', 'Tipo'),
 		);
 	}
 
