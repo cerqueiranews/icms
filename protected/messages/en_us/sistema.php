@@ -43,7 +43,7 @@ return array (
 	'Descrição' => 'Description',
 	'Atualização' => 'Update',
 	'Gerenciamento' => 'Manage',
-	'Lista' => 'list',
+	'Lista' => 'List',
 	'Detalhe' => 'Details',
 	'Apagar' => 'Delete',
 	'Nova Categoria' => 'New Category',
@@ -64,6 +64,7 @@ return array (
 	'Gerenciamento de Tipos de Usuários' => 'Users Role\'s Management',
 	'Você pode utilizar os seguintes operadores' => 'You may optionally enter a comparison operator',
 	'no início de cada valor a ser procurado para especificar o tipo de comparação a ser feita'=>'at the beginning of each of your search values to specify how the comparison should be done',
+	'Busca Avançada'=>'Advanced Search',
 );
 
 ?>

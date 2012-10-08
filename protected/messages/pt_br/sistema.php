@@ -63,5 +63,6 @@ return array (
 	'Gerenciamento de Tipos de Usuários' => '',
 	'Você pode utilizar os seguintes operadores' => '',
 	'no início de cada valor a ser procurado para especificar o tipo de comparação a ser feita'=>'',
+	'Busca Avançada'=>'',
 );
 ?>
