@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	Yii::t('Usuários')=>array('index'),
+	Yii::t('sistema','Usuários')=>array('index'),
 	$model->nome=>array('view','id'=>$model->id),
-	Yii::t('Atualização'),
+	Yii::t('sistema','Atualização'),
 );
 
 $this->menu=array(
-	array('label'=>Yii::t('Lista'), 'url'=>array('index')),
-	array('label'=>Yii::t('Nova'), 'url'=>array('create')),
-	array('label'=>Yii::t('Detalhe'), 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>Yii::t('Gerenciamento'), 'url'=>array('admin')),
+	array('label'=>Yii::t('sistema','Lista'), 'url'=>array('index')),
+	array('label'=>Yii::t('sistema','Nova'), 'url'=>array('create')),
+	array('label'=>Yii::t('sistema','Detalhe'), 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>Yii::t('sistema','Gerenciamento'), 'url'=>array('admin')),
 );
 ?>
 
-<h1><?php echo Yii::t('Atualizando Usuário');?> #<?php echo $model->id; ?></h1>
+<h1><?php echo Yii::t('sistema','Atualizando Usuário');?> #<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
