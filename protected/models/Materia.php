@@ -97,7 +97,14 @@ class Materia extends CActiveRecord
 			'categoria' => array(self::BELONGS_TO, 'Categoria', 'id_categoria'),
 		);
 	}
-
+	
+	public function defaultScope()
+    {
+        return array(
+            'order'=>"data DESC",
+        );
+    }
+	
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
