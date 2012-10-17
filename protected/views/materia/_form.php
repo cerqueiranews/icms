@@ -45,7 +45,7 @@
 			Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/plugins/ckeditor/ckeditor.js',CClientScript::POS_HEAD);
 			$ckeditor = new CKEditor();
 			$ckeditor->basePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'../../../plugins/ckeditor/';
-			CKFinder::SetupCKEditor($ckeditor, '/cms/plugins/ckfinder/');
+			CKFinder::SetupCKEditor($ckeditor, '/icms/plugins/ckfinder/');
 			$ckeditor->editor('Materia[texto]');
 			
 			echo $form->hiddenField($model,'data', array('value'=>date('Y-m-d h:i:s')));
