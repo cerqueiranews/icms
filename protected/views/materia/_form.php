@@ -32,6 +32,39 @@
 		<?php echo $form->dropDownList($model, 'id_categoria', $categorias); ?>
 		<?php echo $form->error($model,'id_categoria'); ?>
 	</div>
+	
+	<div class="row">
+	<?php echo $form->labelEx($model,'data'); ?>
+		<?php
+			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+			$this->widget('CJuiDateTimePicker',
+				array(
+					'model'=> $model,
+					'mode' => 'datetime',
+					'attribute'=>'data',
+					'id'=>'Materia_data',
+					'name'=>'Materia[data]',
+					'language'=>'pt-BR',
+					'options' => array(
+						'duration'=>'fast',
+						'showAnim' =>'slide',
+						'timeOnlyTitle' => Yii::t('sistema','Escolha Hora'),
+						'dateFormat' => 'yy-mm-dd',
+						'timeFormat' => 'hh:mm:ss tt',
+					    'timeText' => Yii::t('sistema','Horário'),
+					    'hourText' => Yii::t('sistema','Hora'),
+					    'minuteText' => Yii::t('sistema','Minuto'),
+					    'secondText' => Yii::t('sistema','Segundo'),
+					    'millisecText' => Yii::t('sistema','Milisegundo'),
+					    'currentText' => Yii::t('sistema','Agora'),
+					    'closeText' => Yii::t('sistema','Aplicar'),
+						'timezoneText' => Yii::t('sistema','Fuso Horário'),
+					),
+				)
+			);    
+		?>
+		<?php echo $form->error($model,'data'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'texto'); ?>
@@ -48,7 +81,6 @@
 			CKFinder::SetupCKEditor($ckeditor, '/icms/plugins/ckfinder/');
 			$ckeditor->editor('Materia[texto]');
 			
-			echo $form->hiddenField($model,'data', array('value'=>date('Y-m-d h:i:s')));
 			echo $form->hiddenField($model,'id_usuario', array('value'=>Yii::app()->user->id));
 	?>
 	</div>
